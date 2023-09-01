@@ -1,4 +1,4 @@
 FROM tomcat:latest
 #RUN cp -R  /usr/local/tomcat/webapps.dist/*  /usr/local/tomcat/webapps
-Run cp -R /var/lib/jenkins/workspace/1stpisp/webapp/target/webapp.war /usr/local/tomcat/webapps
+COPY ./*.war /usr/local/tomcat/webapps
 
