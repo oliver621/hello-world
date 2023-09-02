@@ -1,4 +1,5 @@
-FROM tomcat:8
-#RUN cp -R  /usr/local/tomcat/webapps.dist/*  /usr/local/tomcat/webapps
-COPY ./*.war /usr/local/tomcat/webapps
+FROM tomcat
+RUN rm -r webapps
+RUN mv webapps.dist webapps
+EXPOSE 2000
 
