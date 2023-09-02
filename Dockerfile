@@ -1,5 +1,5 @@
 FROM tomcat
 RUN rm -r webapps
 RUN mv webapps.dist webapps
-EXPOSE 2000
+COPY /webapp/target/*.war /usr/local/tomcat/webapps
 
